@@ -56,7 +56,7 @@ class Profiles(models.Model):
         verbose_name_plural = 'Профили'
 
     def __str__(self):
-        return f"{self.first_name} {self.last_name}"
+        return f"{self.first_name} {self.surname}"
     
 class BonusCards(models.Model):
     balance = models.IntegerField('Баланс')
@@ -75,10 +75,24 @@ class Orders(models.Model):
     board_game_id = models.ForeignKey('BoardGames', verbose_name='Настольная игра', on_delete=models.CASCADE)
     amount = models.IntegerField('Количество')
 
+    class Meta:
+        verbose_name = 'Заказ'
+        verbose_name_plural = 'Заказы'
+
+    def __str__(self):
+        return f"{self.id}"
+
 class Cart(models.Model):
     profile_id = models.ForeignKey('Profiles', verbose_name='Профиль', on_delete=models.CASCADE)
     board_game_id = models.ForeignKey('BoardGames', verbose_name='Настольная игра', on_delete=models.CASCADE)
     amount = models.IntegerField('Количество')
+
+    class Meta:
+        verbose_name = 'Корзина'
+        verbose_name_plural = 'Корзины'
+
+    def __str__(self):
+        return f"{self.id}"
 
 class Purchased(models.Model):
     profile_id = models.ForeignKey('Profiles', verbose_name='Профиль', on_delete=models.CASCADE)
