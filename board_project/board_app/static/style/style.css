@@ -1,12 +1,13 @@
 @import "null.css";
 @import url('https://fonts.googleapis.com/css2?family=Lancelot&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lancelot&family=Leckerli+One&display=swap');
 
 .container {
     width: 1064px;
     margin: 0 auto;
 }
 
-.main-header {
+.main-header_block {
     background-color: #5B331A;
     padding: 28px 0px;
     color: #F7F1BF;
@@ -32,3 +33,29 @@
     align-items: flex-end;
     min-width: 360px;
 }
+
+.middle-header_block {
+    background-color: #835B41;
+    padding: 17px 0px;    
+}
+
+.middle-header_wrap {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.catalog-button{
+    background-color: #492813;
+    border-radius: 3px;
+    color: #F7F1BF;
+    font-family: "Leckerli One", cursive;
+    padding: 12px 6px;
+}
+
+.search-bar_icon-block {
+    background: #492813;
+    padding: 5px;
+    
+}
+

@@ -1,4 +1,6 @@
-from views import root
+from board_app import views
 from django.urls import path
 
-path('', root)
+urlpatterns = [
+    path('', views.root)
+]
