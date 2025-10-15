@@ -7,11 +7,15 @@
     margin: 0 auto;
 }
 
+header{
+    font-family: "Lancelot", serif;
+    color: #F7F1BF;
+}
+
 .main-header_block {
     background-color: #5B331A;
     padding: 28px 0px;
     color: #F7F1BF;
-    font-family: "Lancelot", serif;
     font-size: 16px;
 }
 
@@ -53,9 +57,46 @@
     padding: 12px 6px;
 }
 
-.search-bar_icon-block {
-    background: #492813;
-    padding: 5px;
-    
+.search-bar {
+    min-width: 619px;
+    min-height: 40px;
 }
 
+.main_searchbar{
+    min-width: 584px;
+    padding: 14px 0px 14px 7px;
+    font-size: 15px;
+    color: #A7A7A7;
+    border-radius: 3px;
+}
+
+.search_button {
+    width: 35px;
+    min-height: 35px;
+    border-radius: 3px;
+    background: #492813 url(../media/Search.svg) no-repeat 50% 50%;
+    cursor: pointer;
+    position: relative;
+    right: 42px;
+}
+
+.profile-nav_list{
+    display: flex;
+    min-width: 198px;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 43px;
+}
+
+.profile-nav_list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom-header_wrap{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
