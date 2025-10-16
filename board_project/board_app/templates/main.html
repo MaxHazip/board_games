@@ -7,7 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="main-header">
+    <div class="wrapper">
+        <header class="main-header">
         <div class="main-header_block">
             <div class="container">
                 <nav class="main-nav">
@@ -48,20 +49,28 @@
                     <nav class="profile-nav">
                         <ul class="profile-nav_list">
                             <li class="profile-nav_list-item">
-                                <img src="../static/media/SignIn.svg" alt="">
-                                <p>Sign in</p>
+                                <a href="#">
+                                    <img src="../static/media/SignIn.svg" alt="">
+                                </a>
+                                <a href="#">Sign in</a>
                             </li>
                             <li class="profile-nav_list-item">
-                                <img src="../static/media/Orders.svg" alt="">
-                                <p>Orders</p>
+                                <a href="#">
+                                    <img src="../static/media/Orders.svg" alt="">
+                                </a>
+                                <a href="#">Orders</a>
                             </li>
                             <li class="profile-nav_list-item">
-                                <img src="../static/media/Wishlist.svg" alt="">
-                                <p>Wish list</p>
+                                <a href="#">
+                                    <img src="../static/media/Wishlist.svg" alt="">
+                                </a>
+                                <a href="#">Wish list</a>
                             </li>
                             <li class="profile-nav_list-item">
-                                <img src="../static/media/Cart.svg" alt="">
-                                <p>Cart</p>
+                                <a href="#">
+                                    <img src="../static/media/Cart.svg" alt="">
+                                </a>
+                                <a href="#">Cart</a>
                             </li>
                         </ul>
                     </nav>
@@ -69,22 +78,41 @@
                 <div class="bottom-header_wrap">
                     <nav class="bottom-header_nav">
                         <ul class="bottom-header_nav-list">
-                            <li class="bottom-header_nav-list_item">Promotion</li>
-                            <li class="bottom-header_nav-list_item">Sales</li>
                             <li class="bottom-header_nav-list_item">
-                                <img src="" alt="">
-                                <p>Online</p>
+                                <a href="#">Promotion</a>
                             </li>
-                            <li class="bottom-header_nav-list_item">What should I play?</li>
-                            <li class="bottom-header_nav-list_item"></li>
-                            <li class="bottom-header_nav-list_item"></li>
-                            <li class="bottom-header_nav-list_item"></li>
+                            <li class="bottom-header_nav-list_item">
+                                <a href="#">Sales</a>
+                            </li>
+                            <li>
+                                <a href="">Guide</a>
+                            </li>
+                            <li class="bottom-header_nav-list_item">
+                                <a class="#">Online</a>
+                            </li>
+                            <li class="bottom-header_nav-list_item">
+                                <a href="#">What should I play?</a>
+                            </li>
+                            <li class="bottom-header_nav-list_item">
+                                <a href="#"><img src="" alt=""></a>
+                                <a href="#">Gift certificates</a>
+                            </li>
+                            <li class="bottom-header_nav-list_item">
+                                <a href="#">Play journal</a>
+                            </li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </div>
-    </header>
+        </header>    
+        <main>
+            {% block main %}
+            {% endblock %}
+        </main>
+        <footer class="main-footer">
 
+        </footer>
+    </div>
 </body>
 </html>
