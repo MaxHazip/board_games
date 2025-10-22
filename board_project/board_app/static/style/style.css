@@ -1,6 +1,9 @@
 @import "null.css";
+
 @import url('https://fonts.googleapis.com/css2?family=Lancelot&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lancelot&family=Leckerli+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
 
 .container {
     width: 1064px;
@@ -13,12 +16,6 @@
     min-height: 100vh;
 }
 
-.main-footer {
-    margin-top: auto;
-    width: 100%;
-    height: 50px;
-    background-color: #B2A196;
-}
 
 header{
     font-family: "Lancelot", serif;
@@ -118,10 +115,105 @@ header{
 .bottom-header_nav-list {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     font-size: 16px;
 }
 
-.bottom-header_nav-list:nth-child(4){
-    background-image: url('../media/Online.png') no-repeat ;
+.online{
+    padding: 8px 15px;
+    background-image: url("../media/Online.png");
+    color: #492813;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.online img {
+    margin-right: 2px;
+}
+
+
+
+.certificates {
+    display: flex;
+    align-items: center;
+}
+
+.certificates img {
+    margin-right: 8px;
+}
+
+.main-footer {
+    margin-top: auto;
+    width: 100%;
+    background-color: #B2A196;
+    padding: 60px 0px;
+    color: #5B331A;
+    font-family: "Fjalla One", sans-serif;
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 120px;
+}
+
+.main-footer h2 {
+    font-size: 24px;
+}
+
+.main-footer h3 {
+    font-size: 20px;
+}
+
+.social-media_list {
+    display: flex;
+    justify-content: space-between;    
+    max-width: 220px;
+}
+
+.footer-wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.footer-navigation {
+    min-width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-navigation h3{
+    font-size: 24px;
+}
+
+.in-our-stores{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+}
+
+.in-our-stores_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+}
+
+.in-online-store {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 210px;
+}
+
+.in-online-store_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 80%;
 }

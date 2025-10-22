@@ -15,9 +15,11 @@
                     <ul class="main-nav_list">
                     <div class="main-nav_block">
                         <li class="main-nav_item">
-                            <div class="location">
-                                <img src="../static/media/Map.svg" alt="Карта" class="map-icon">
-                                <a href="#">Russia, Moscow</a>
+                            <div>
+                                <a href="#" class="location">
+                                    <img src="../static/media/Map.svg" alt="Карта" class="map-icon">
+                                    Russia, Moscow
+                                </a>
                             </div>
                         </li>
                             <li class="main-nav_item"><a href="#">Stores</a></li>
@@ -35,7 +37,9 @@
         <div class="middle-header_block">
             <div class="container">
                 <div class="middle-header_wrap">
-                    <img src="../static/media/Logo.svg\" alt="Лого">
+                    <a href="#">
+                        <img src="../static/media/Logo.svg\" alt="Лого">
+                    </a>
                     <button class="catalog-button">
                         <img src="../static/media/Catalog.svg" alt="Каталог">
                         Catalog
@@ -88,14 +92,21 @@
                                 <a href="">Guide</a>
                             </li>
                             <li class="bottom-header_nav-list_item">
-                                <a class="#">Online</a>
+                                <a href="#">
+                                    <div class="online">
+                                        <img src="../static/media/together.svg" alt="">
+                                        Online
+                                    </div>
+                                </a>
                             </li>
                             <li class="bottom-header_nav-list_item">
                                 <a href="#">What should I play?</a>
                             </li>
                             <li class="bottom-header_nav-list_item">
-                                <a href="#"><img src="" alt=""></a>
-                                <a href="#">Gift certificates</a>
+                                <a href="#" class="certificates">
+                                    <img src="../static/media/certificates.svg" alt="">
+                                    <span>Gift certificates</span>
+                                </a>
                             </li>
                             <li class="bottom-header_nav-list_item">
                                 <a href="#">Play journal</a>
@@ -111,7 +122,86 @@
             {% endblock %}
         </main>
         <footer class="main-footer">
-
+            <div class="container">
+                <div class="footer-wrapper">
+                    <div class="social-media">
+                    <h2>Board game store Sage’s Tavern</h2>
+                    <h3>We are on social media:</h3>
+                    <ul class="social-media_list">
+                        <li>
+                            <a href="#">
+                                <img src="../static/media/YouTube.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../static/media/TikTok.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../static/media/Telegram App.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../static/media/Instagram.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../static/media/Facebook.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    </div>
+                    <div class="footer-navigation">
+                        <div class="in-our-stores">
+                            <h3>In our stores</h3>
+                            <ul class="in-our-stores_list">
+                                <li class="in-our-stores_list_item">
+                                    <a href="#">Store addresses</a>
+                                </li>
+                                <li class="in-our-stores_list_item">
+                                    <a href="#">Services</a>
+                                </li>
+                                <li class="in-our-stores_list_item">
+                                    <a href="#">Our partners</a>
+                                </li>
+                                <li class="in-our-stores_list_item">
+                                    <a href="#">About the Company</a>
+                                </li>
+                                <li class="in-our-stores_list_item">
+                                    <a href="#">For business</a>
+                                </li>
+                                <li class="in-our-stores_list_item">
+                                    <a href="#">Do you want to work with us?</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="in-online-store">
+                            <h3>In the online store</h3>
+                            <ul class="in-online-store_list">
+                                <li class="in-online-store_list-item">
+                                    <a href="#">Delivery and payment</a>
+                                </li>
+                                <li class="in-online-store_list-item">
+                                    <a href="#">Bonus program</a>
+                                </li>
+                                <li class="in-online-store_list-item">
+                                    <a href="#">Questions and answers</a>
+                                </li>
+                                <li class="in-online-store_list-item">
+                                    <a href="#">Feedback</a>
+                                </li>
+                                <li class="in-online-store_list-item">
+                                    <a href="#">Stock</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
 </body>
