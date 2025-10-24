@@ -10,7 +10,7 @@ class BoardGames(models.Model):
     game_time = models.CharField('Среднее время игры', max_length=30)
     min_age = models.IntegerField('Минимальный возраст')
     games_genres = models.ManyToManyField('Genres')
-    games_categories = models.ManyToManyField('Categories')
+    game_image = models.ImageField('Картинка игры')
 
 
     class Meta:
@@ -26,16 +26,6 @@ class Genres(models.Model):
     class Meta:
         verbose_name = 'Жанр'
         verbose_name_plural = 'Жанры'
-
-    def __str__(self):
-        return f"{self.name}"
-    
-class Categories(models.Model):
-    name = models.CharField('Название', max_length=30, unique=True)
-
-    class Meta:
-        verbose_name = 'Категория'
-        verbose_name_plural = 'Категории'
 
     def __str__(self):
         return f"{self.name}"
