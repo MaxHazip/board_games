@@ -273,3 +273,28 @@ main {
     flex-direction: column;
     justify-content: space-between;   
 }
+
+.tags > p:first-child {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.catalog_wrapper {
+    font-family: "Fjalla One", sans-serif;
+    color: #5B331A;
+    padding: 100px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tags_list-item {
+    background-image: url("../media/-.png");
+    background-position: center left;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+.tags_list-item:last-child {
+    margin-bottom: 0px;
+}
