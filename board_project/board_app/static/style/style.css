@@ -276,7 +276,7 @@ main {
 
 .tags > p:first-child {
     font-size: 40px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 .catalog_wrapper {
@@ -306,16 +306,51 @@ main {
     width: 85%;
 }
 
+.searchbar {
+    display: inline-flex;
+    align-items: center;
+}
+
 .button {
     padding: 6px;
+    height: 25px;
     background-color: #61A447;
     border-radius: 0px 2px 2px 0px;
 }
 
 #search {
     height: 22px;
+    border: 2px solid #EDE9D4;
+    border-radius: 2px 0px 0px 2px;
+    padding: 2px;
+    font-size: 14px;
+    height: 100%;
 }
 
 .search-image {
     height: 10px;
+}
+
+.search-form {
+    width: 100%;
+}
+
+.search-form p:first-child {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.search-field {
+    display: flex;
+    justify-content: space-between;
+    width: 46.67%;
+    align-items: center;
+}
+
+select {
+    font-family: "Fjalla One", sans-serif;
+    color: #5B331A;
+    padding: 2px;
+    border: 2px solid #EDE9D4;
+    font-size: 14px;
 }
