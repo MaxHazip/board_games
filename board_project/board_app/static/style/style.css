@@ -10,6 +10,10 @@
     margin: 0 auto;
 }
 
+body {
+    background-color: #FBF9EE;
+}
+
 .wrapper{
     display: flex;
     flex-direction: column;
@@ -304,7 +308,6 @@ main {
     flex-direction: column;
     align-items: start;
     width: 85%;
-    justify-content: space-between;
 }
 
 .searchbar {
@@ -334,6 +337,7 @@ main {
 
 .search-form {
     width: 100%;
+    margin-bottom: 30px;
 }
 
 .search-form p:first-child {
@@ -353,5 +357,53 @@ select {
     color: #5B331A;
     padding: 2px;
     border: 2px solid #EDE9D4;
+    font-size: 14px;
+}
+
+.cards-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    row-gap: 15px;
+}
+
+.store-card {
+    padding: 12px 19px;
+    background-color: white;
+    width: 80%;
+    border-radius: 1px;
+    border: 0.5px solid #EDE8B8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.game-title {
+    font-size: 16px;
+}
+
+.game-image {
+    margin-bottom: 15px;
+}
+
+.card-item {
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 32px;
+}
+
+.buy {
+    font-size: 20px;
+    color: white;
+    padding: 5px 63px;
+    background-color: #61A447;
+}
+
+.see-more {
+    color: rgba(91, 51, 26, 0.65);
     font-size: 14px;
 }
