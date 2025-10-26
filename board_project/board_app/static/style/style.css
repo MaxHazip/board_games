@@ -298,3 +298,24 @@ main {
 .tags_list-item:last-child {
     margin-bottom: 0px;
 }
+
+.search-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 85%;
+}
+
+.button {
+    padding: 6px;
+    background-color: #61A447;
+    border-radius: 0px 2px 2px 0px;
+}
+
+#search {
+    height: 22px;
+}
+
+.search-image {
+    height: 10px;
+}

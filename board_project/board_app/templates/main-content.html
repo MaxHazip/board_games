@@ -58,7 +58,24 @@
             </ul>
         </div>
         <div class="search-cards">
-            <form action="" class="search"></form>
+            <form action="#" class="search">
+                <fieldset class="search-field">
+                    <p>Store</p>
+                    <label for="sort">Sort:</label>
+                    <select name="sort" id="sort">
+                        <option value="date">Date (newest to oldest)</option>
+                        <option value="date-reverse">Date (oldest to newest)</option>
+                        <option value="price-asc">Price ascending</option>
+                        <option value="price-des">Price descending</option>
+                        <option value="alphabet">Alphabetically A-Z</option>
+                        <option value="reverse-alphabet">Alphabetically Z-A</option>
+                        <option value="popular">Popularity</option>
+                    </select>
+                    <label for="search">Search</label>
+                    <input type="search" id="search">
+                    <button type="button" class="button"><img src="../static/media/Search-white.svg" alt="" class="search-image"></button>
+                </fieldset>
+            </form>
         </div>
     </div>
 </div>
