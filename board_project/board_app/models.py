@@ -10,7 +10,7 @@ class BoardGames(models.Model):
     game_time = models.CharField('Среднее время игры', max_length=30)
     min_age = models.IntegerField('Минимальный возраст')
     games_genres = models.ManyToManyField('Genres')
-    game_image = models.ImageField('Картинка игры')
+    game_image = models.ImageField('Картинка игры', upload_to='media/')
 
 
     class Meta:
