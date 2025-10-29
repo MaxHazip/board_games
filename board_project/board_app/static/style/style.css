@@ -364,6 +364,7 @@ select {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
     justify-content: space-between;
     row-gap: 15px;
 }
@@ -377,8 +378,9 @@ select {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     text-align: center;
     display: grid;
-    justify-content: space-between;
-    height: 100%;
+    grid-template-columns: auto;
+    grid-template-rows: subgrid;
+    grid-row: span 5;
 }
 
 .game-title {
