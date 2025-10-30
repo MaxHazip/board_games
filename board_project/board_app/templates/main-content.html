@@ -25,36 +25,11 @@
         <div class="tags">
             <p>Store</p>
             <ul class="tags_list">
-                <li class="tags_list-item">
-                    <a href="#">Role-playing</a>
-                </li>
-                <li class="tags_list-item">
-                    <a href="#">Puzzles</a>
-                </li>
-                <li class="tags_list-item">
-                    <a href="#">Advantures</a>
-                </li>
-                <li class="tags_list-item">
-                    <a href="#">Family games</a>
-                </li>
-                <li class="tags_list-item">
-                    <a href="#">Strategic</a>
-                </li>
-                <li class="tags_list-item">
-                    <a href="#">Card games</a>
-                </li>
-                <li class="tags_list-item">
-                    <a href="#">Economic</a>
-                </li>
-                <li class="tags_list-item">
-                    <a href="#">Wargames</a>
-                </li>
-                <li class="tags_list-item">
-                    <a href="#">Abstract</a>
-                </li>
-                <li class="tags_list-item">
-                    <a href="#">For parties</a>
-                </li>
+                {% for genre in genres %}
+                    <li class="tags_list-item">
+                        <a href="#">{{ genre.name }}</a>
+                    </li>
+                {% endfor %}
             </ul>
         </div>
         <div class="search-cards">
@@ -83,69 +58,15 @@
                 </fieldset>
             </form>
             <div class="cards-grid">
-                <div class="store-card">
-                    <img src="../static/{{ board_game.game_image }}" alt="" class="game-image card-item">
-                    <p class="game-title card-item">{{ board_game.name }}</p>
-                    <p class="price card-item">{{ board_game.price }}$</p>
-                    <button class="buy card-item">Buy</button>
-                    <a href="#" class="see-more">more</a>
-                </div>
-                <div class="store-card">
-                    <img src="../static/media/monopoly.png" alt="" class="game-image card-item">
-                    <p class="game-title card-item">Monopoly</p>
-                    <p class="price card-item">23$</p>
-                    <button class="buy card-item">Buy</button>
-                    <a href="#" class="see-more">more</a>
-                </div>
-                <div class="store-card">
-                    <img src="../static/media/monopoly.png" alt="" class="game-image card-item">
-                    <p class="game-title card-item">Monopoly</p>
-                    <p class="price card-item">23$</p>
-                    <button class="buy card-item">Buy</button>
-                    <a href="#" class="see-more">more</a>
-                </div>
-                <div class="store-card">
-                    <img src="../static/media/monopoly.png" alt="" class="game-image card-item">
-                    <p class="game-title card-item">Monopoly</p>
-                    <p class="price card-item">23$</p>
-                    <button class="buy card-item">Buy</button>
-                    <a href="#" class="see-more">more</a>
-                </div>
-                <div class="store-card">
-                    <img src="../static/media/monopoly.png" alt="" class="game-image card-item">
-                    <p class="game-title card-item">Monopoly</p>
-                    <p class="price card-item">23$</p>
-                    <button class="buy card-item">Buy</button>
-                    <a href="#" class="see-more">more</a>
-                </div>
-                <div class="store-card">
-                    <img src="../static/media/monopoly.png" alt="" class="game-image card-item">
-                    <p class="game-title card-item">Monopoly</p>
-                    <p class="price card-item">23$</p>
-                    <button class="buy card-item">Buy</button>
-                    <a href="#" class="see-more">more</a>
-                </div>
-                <div class="store-card">
-                    <img src="../static/media/monopoly.png" alt="" class="game-image card-item">
-                    <p class="game-title card-item">Monopoly</p>
-                    <p class="price card-item">23$</p>
-                    <button class="buy card-item">Buy</button>
-                    <a href="#" class="see-more">more</a>
-                </div>
-                <div class="store-card">
-                    <img src="../static/media/monopoly.png" alt="" class="game-image card-item">
-                    <p class="game-title card-item">Monopoly</p>
-                    <p class="price card-item">23$</p>
-                    <button class="buy card-item">Buy</button>
-                    <a href="#" class="see-more">more</a>
-                </div>
-                <div class="store-card">
-                    <img src="../static/media/monopoly.png" alt="" class="game-image card-item">
-                    <p class="game-title card-item">Monopoly</p>
-                    <p class="price card-item">23$</p>
-                    <button class="buy card-item">Buy</button>
-                    <a href="#" class="see-more">more</a>
-                </div>
+                {% for board_game in board_games %}
+                    <div class="store-card">
+                        <img src="../static/{{ board_game.game_image }}" alt="" class="game-image card-item">
+                        <p class="game-title card-item">{{ board_game.name }}</p>
+                        <p class="price card-item">{{ board_game.price }}$</p>
+                        <button class="buy card-item">Buy</button>
+                        <a href="#" class="see-more">more</a>
+                    </div>
+                {% endfor %}
             </div>
         </div>
     </div>
