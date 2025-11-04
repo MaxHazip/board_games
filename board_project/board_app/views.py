@@ -12,3 +12,10 @@ def root(request):
         "genres": genres,
     }
     return render(request, 'main-content.html', context)
+
+def page(request):
+
+    context = {
+
+    }
+    return render(request, 'game-page.html', context)
