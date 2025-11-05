@@ -9,10 +9,10 @@
     <div class="container">
         <h1 class="game-title">{{ game.name }}</h1>
         <div class="game_min-information">
-            <img src="../static/media/uzhas-arkhjema-tajnoe-poslanie-00-1000x416-wm.png" alt="" class="game-img">
+            <img src="../static/{{ game.game_image }}" alt="" class="game-img">
             <div class="buy-field">
                 <div class="price-amount">
-                    <p class="price">15.00$</p>
+                    <p class="price">{{ game.price }}</p>
                     <div class="amount">
                         <button type="button" class="minus number-button">-</button>
                         <input type="number" name="" id="amount-input" min="0" max="50">
@@ -41,13 +41,13 @@
                     </ul>
                     <ul class="criteria-list">
                         <li class="criteria-list-item">
-                            2-4
+                            {{ game.players_number }}
                         </li>
                         <li class="criteria-list-item">
-                            15-20 min
+                            {{ game.game_time }}
                         </li>
                         <li class="criteria-list-item">
-                            from 8 years old
+                            {{ game.min_age }}+
                         </li>
                         <li class="criteria-list-item">
                             English
@@ -60,7 +60,7 @@
             <p class="decs-title">Description</p>
             <div class="desc-line"></div>
         </div>
-        <p class="description">The foggy streets of Arkham hold chilling secrets that only the bravest can unravel. Immerse yourself in the eerie atmosphere of a city consumed by madness, where every step could be your last. Will you be able to maintain your sanity under the pressure of ancient forces and escape the all-seeing eye, or will you remain trapped in the labyrinth of your own nightmares forever?</p>
+        <p class="description">{{ game.description }}</p>
     </div>
 </section>
 {% endblock %}

@@ -67,7 +67,7 @@
                         <img src="../static/{{ board_game.game_image }}" alt="" class="game-image card-item">
                         <p class="game-title card-item">{{ board_game.name }}</p>
                         <p class="price card-item">{{ board_game.price }}$</p>
-                        <a href="game-page" class="buy card-item">Buy</a>
+                        <a href="game-pages/{{ board_game.id }}" class="buy card-item">Buy</a>
                         <a href="#" class="see-more">more</a>
                     </div>
                 {% endfor %}

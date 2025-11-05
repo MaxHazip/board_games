@@ -15,7 +15,7 @@ def root(request):
 
 def page(request, item_id: int):
     game = BoardGames.objects.filter(id=item_id)
-    get_object_or_404(game)
+    game = get_object_or_404(game)
 
     context = {
         'game': game,
