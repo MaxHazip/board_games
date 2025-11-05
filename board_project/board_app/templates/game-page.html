@@ -2,7 +2,6 @@
 
 {% block style %}
 <link rel="stylesheet" href="../static/style/game-page_style.css">
-
 {% endblock %}
 
 {% block main %}
@@ -15,47 +14,53 @@
                 <div class="price-amount">
                     <p class="price">15.00$</p>
                     <div class="amount">
-                        <img src="" alt="" class="minus">
+                        <button type="button" class="minus number-button">-</button>
                         <input type="number" name="" id="amount-input" min="0" max="50">
-                        <img src="" alt="" class="plus">
+                        <button type="button" class="plus number-button">+</button>
                     </div>
                 </div>
-                <button type="button" class="game-buy-button"></button>
-                <div class="criteria-wrap"></div>
+                <button type="button" class="game-buy-button">Buy</button>
+                <div class="criteria-wrap">
                     <ul class="criteria-titles-list">
                         <li class="criteria-titles-item">
-                            <img src="" alt="">
-                            <p></p>
+                            <img src="../static/media/stickman.svg" alt="" class="criteria-titles-img">
+                            <p>Number of players:</p>
                         </li>
                         <li class="criteria-titles-item">
-                            <img src="" alt="">
-                            <p></p>
+                            <img src="../static/media/play-time.svg" alt="" class="criteria-titles-img">
+                            <p>Game time:</p>
                         </li>
                         <li class="criteria-titles-item">
-                            <img src="" alt="">
-                            <p></p>
+                            <img src="../static/media/age.svg" alt="" class="criteria-titles-img">
+                            <p>Age:</p>
                         </li>
                         <li class="criteria-titles-item">
-                            <img src="" alt="">
-                            <p></p>
+                            <img src="../static/media/Language.svg" alt="" class="criteria-titles-img">
+                            <p>Language:</p>
                         </li>
                     </ul>
                     <ul class="criteria-list">
                         <li class="criteria-list-item">
+                            2-4
                         </li>
                         <li class="criteria-list-item">
-
+                            15-20 min
                         </li>
                         <li class="criteria-list-item">
-
+                            from 8 years old
                         </li>
                         <li class="criteria-list-item">
-
+                            English
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
+        <div class="desc-title-borders">
+            <p class="decs-title">Description</p>
+            <div class="desc-line"></div>
+        </div>
+        <p class="description">The foggy streets of Arkham hold chilling secrets that only the bravest can unravel. Immerse yourself in the eerie atmosphere of a city consumed by madness, where every step could be your last. Will you be able to maintain your sanity under the pressure of ancient forces and escape the all-seeing eye, or will you remain trapped in the labyrinth of your own nightmares forever?</p>
     </div>
 </section>
 {% endblock %}

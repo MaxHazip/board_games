@@ -38,6 +38,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 8.26%;
 }
 
 .price {
@@ -45,7 +46,7 @@
 }
 
 .amount {
-    width: 33%;
+    width: 40%;
     display: flex;
     justify-content: space-between;
 }
@@ -55,7 +56,8 @@
     box-sizing: border-box;
     padding: 9px 13px;
     text-align: center;
-    width: 71.69%;
+    width: 59.54%;
+    aspect-ratio: 1 / 1;
     font-size: 32px;
     color: #5B331A;
     border: 0.5px solid rgba(91, 51, 26, 0.5);
@@ -65,4 +67,81 @@
 #amount-input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+.number-button {
+    background-color: #FBF9EE;
+    font-size: 32px;
+}
+
+.minus {
+    color: #A44747;
+}
+
+.plus {
+    color: #61A447;
+}
+
+.game-buy-button {
+    padding: 2.75% 28.62%;
+    color: white;
+    font-size: 20px;
+    background-color:#61A447;
+    margin-bottom: 8.26%;
+}
+
+.criteria-wrap {
+    height: 32.38%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.criteria-titles-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.criteria-titles-item > p {
+    display: inline-block;
+    margin-left: 3px;
+}
+
+.criteria-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.game_min-information {
+    margin-bottom: 60px;
+}
+
+.decs-title {
+    padding: 11px 45px;
+    font-size: 24px;
+    border: 2px solid #5B331A;
+    border-bottom: none;
+    display: inline-block;
+}
+
+.desc-title-borders {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 30px;
+}
+
+.desc-line {
+    width: 100%;
+    height: 2px;
+    background-color:#5B331A;
+}
+
+.description {
+    font-size: 24px;
 }
