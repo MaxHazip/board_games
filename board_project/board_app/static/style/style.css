@@ -1,4 +1,3 @@
-@import "null.css";
 
 @import url('https://fonts.googleapis.com/css2?family=Lancelot&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lancelot&family=Leckerli+One&display=swap');
@@ -162,10 +161,6 @@ select {
     height: 204px;
 }
 
-.card-item {
-    /* margin-bottom: 15px; */
-}
-
 .price {
     font-size: 32px;
 }
@@ -174,7 +169,11 @@ select {
     font-size: 20px;
     color: white;
     padding: 5px 63px;
-    background-color: #61A447;
+    background-color: #61A447;  
+}
+
+.buy:visited {
+    color: white;
 }
 
 .see-more {
