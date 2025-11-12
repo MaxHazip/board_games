@@ -31,7 +31,7 @@
             <ul class="tags_list">
                 {% for genre in genres %}
                     <li class="tags_list-item">
-                        <a href="#">{{ genre.name }}</a>
+                        <a href="?genres={{ genre.id }}">{{ genre.name }}</a>
                     </li>
                 {% endfor %}
             </ul>

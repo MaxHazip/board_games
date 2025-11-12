@@ -14,6 +14,10 @@ def root(request):
             name__icontains=query
         )
 
+    genres_req = request.GET.get('genres', '')
+
+    if genres_req:
+        board_games = BoardGames.objects.filter(games_genres=genres_req)
 
     
     context = {
