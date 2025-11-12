@@ -180,3 +180,12 @@ select {
     color: rgba(91, 51, 26, 0.65);
     font-size: 14px;
 }
+
+.res-for {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.nothing {
+    font-size: 24px;
+}

@@ -6,10 +6,21 @@ def root(request):
 
     board_games = BoardGames.objects.all()
     genres = Genres.objects.all()
+    query = request.GET.get('search', '')
+    results = []
+
+    if query:
+        results = BoardGames.objects.filter(
+            name__icontains=query
+        )
+
+
     
     context = {
         "board_games": board_games,
         "genres": genres,
+        "query": query,
+        "results": results,
     }
     return render(request, 'main-content.html', context)
 
