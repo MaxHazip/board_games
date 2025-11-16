@@ -4,33 +4,41 @@ from .models import *
 # Create your views here.
 def root(request):
 
-    board_games = BoardGames.objects.all()
+    board_games = BoardGames.objects.all().order_by('-add_date')
     genres = Genres.objects.all()
     query = request.GET.get('search', '')
-    results = []
+    genres_req = request.GET.get('genres', '')
+    sort = request.GET.get('sort', '')
 
-    if query:
-        results = BoardGames.objects.filter(
-            name__icontains=query
+
+    if query or genres_req:
+        board_games = (
+            BoardGames
+            .objects
+            .filter(
+                games_genres=genres_req,
+                name__icontains=query
+            ).order_by('-add_date')
         )
 
-    genres_req = request.GET.get('genres', '')
-
-    if genres_req:
-        board_games = BoardGames.objects.filter(games_genres=genres_req)
-
+    if sort == 'date-reverse':
+        board_games.order_by('add_date')
     
     context = {
         "board_games": board_games,
         "genres": genres,
         "query": query,
-        "results": results,
     }
     return render(request, 'main-content.html', context)
 
 def page(request, item_id: int):
     game = BoardGames.objects.filter(id=item_id)
     game = get_object_or_404(game)
+
+    game.popularity += 1
+    game.save()
+
+    
 
     context = {
         'game': game,

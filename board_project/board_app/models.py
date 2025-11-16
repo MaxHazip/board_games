@@ -11,6 +11,8 @@ class BoardGames(models.Model):
     min_age = models.IntegerField('Минимальный возраст')
     games_genres = models.ManyToManyField('Genres')
     game_image = models.ImageField('Картинка игры', upload_to='media/')
+    add_date = models.DateField("Дата добавления", default='2025-01-01')
+    popularity = models.IntegerField('Популярность', default=0)
 
 
     class Meta:

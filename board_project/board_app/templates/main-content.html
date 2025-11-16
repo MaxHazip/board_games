@@ -31,7 +31,7 @@
             <ul class="tags_list">
                 {% for genre in genres %}
                     <li class="tags_list-item">
-                        <a href="?genres={{ genre.id }}">{{ genre.name }}</a>
+                        <a href="?genres={{ genre.id }}&search={{ request.GET.search }}">{{ genre.name }}</a>
                     </li>
                 {% endfor %}
             </ul>
@@ -39,7 +39,7 @@
         <div class="search-cards">
             <div class="search-form">
                 <p>New</p>
-                <div class="search-field">
+                <form class="search-field" method="get" >
                     <div class="search-sort">
                         <label for="sort">Sort:</label>
                         <select name="sort" id="sort">
@@ -54,14 +54,14 @@
                     </div>
                     <div class="search-find">
                         <label for="search">Search:</label>
-                        <form method="get" class="searchbar">
-                            <input type="text" id="search" name="search" value="{{ query }}">
+                        <div class="searchbar">
+                            <input type="text" id="search" name="search" value="{{ request.GET.search }}">
+                            <input type="text" id="hidden" name="genres" value="{{ request.GET.genres }}">
                             <button type="submit" class="button"><img src="../static/media/Search-white.svg" alt="" class="search-image"></button>
-                        </form>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
-            
                 {% if not query %}
                 <div class="cards-grid">
                     {% for board_game in board_games %}
@@ -77,13 +77,13 @@
                 {% else %}
                 <h2 class="res-for">Reults for "{{ query }}"</h2>
                 <div class="cards-grid">
-                    {% if results %}
-                        {% for item in results %}
+                    {% if board_games %}
+                        {% for board_game in board_games %}
                         <div class="store-card">
-                            <img src="../static/{{ item.game_image }}" alt="" class="game-image card-item">
-                            <p class="game-title card-item">{{ item.name }}</p>
-                            <p class="price card-item">{{ item.price }}$</p>
-                            <a href="game-pages/{{ item.id }}" class="buy card-item">Buy</a>
+                            <img src="../static/{{ board_game.game_image }}" alt="" class="game-image card-item">
+                            <p class="game-title card-item">{{ board_game.name }}</p>
+                            <p class="price card-item">{{ board_game.price }}$</p>
+                            <a href="game-pages/{{ board_game.id }}" class="buy card-item">Buy</a>
                             <a href="#" class="see-more">more</a>
                         </div>
                         {% endfor %}

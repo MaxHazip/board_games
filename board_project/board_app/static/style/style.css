@@ -189,3 +189,7 @@ select {
 .nothing {
     font-size: 24px;
 }
+
+#hidden {
+    display: none;
+}
