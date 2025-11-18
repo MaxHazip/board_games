@@ -39,10 +39,11 @@
         <div class="search-cards">
             <div class="search-form">
                 <p>New</p>
-                <form class="search-field" method="get" >
-                    <div class="search-sort">
+                <div class="search-field">
+                    <form class="search-sort" method="post">
                         <label for="sort">Sort:</label>
-                        <select name="sort" id="sort">
+                        {% csrf_token %}
+                        <select name="sort" id="sort" onchange="this.form.submit()">
                             <option value="date">Date (newest to oldest)</option>
                             <option value="date-reverse">Date (oldest to newest)</option>
                             <option value="price-asc">Price ascending</option>
@@ -51,16 +52,16 @@
                             <option value="reverse-alphabet">Alphabetically Z-A</option>
                             <option value="popular">Popularity</option>
                         </select>
-                    </div>
+                    </form>
                     <div class="search-find">
                         <label for="search">Search:</label>
-                        <div class="searchbar">
+                        <form class="searchbar" method="get" >
                             <input type="text" id="search" name="search" value="{{ request.GET.search }}">
                             <input type="text" id="hidden" name="genres" value="{{ request.GET.genres }}">
                             <button type="submit" class="button"><img src="../static/media/Search-white.svg" alt="" class="search-image"></button>
-                        </div>
+                        </form>
                     </div>
-                </form>
+                </div>
             </div>
                 {% if not query %}
                 <div class="cards-grid">
