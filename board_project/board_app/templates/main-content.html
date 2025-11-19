@@ -31,7 +31,7 @@
             <ul class="tags_list">
                 {% for genre in genres %}
                     <li class="tags_list-item">
-                        <a href="?genres={{ genre.id }}&search={{ request.GET.search }}">{{ genre.name }}</a>
+                        <a href="?genres={{ genre.name }}&search={{ request.GET.search }}">{{ genre.name }}</a>
                     </li>
                 {% endfor %}
             </ul>
@@ -40,17 +40,17 @@
             <div class="search-form">
                 <p>New</p>
                 <div class="search-field">
-                    <form class="search-sort" method="post">
+                    <form class="search-sort" method="get">
                         <label for="sort">Sort:</label>
-                        {% csrf_token %}
                         <select name="sort" id="sort" onchange="this.form.submit()">
                             <option value="date">Date (newest to oldest)</option>
-                            <option value="date-reverse">Date (oldest to newest)</option>
-                            <option value="price-asc">Price ascending</option>
-                            <option value="price-des">Price descending</option>
-                            <option value="alphabet">Alphabetically A-Z</option>
-                            <option value="reverse-alphabet">Alphabetically Z-A</option>
-                            <option value="popular">Popularity</option>
+                            <option value="date-reverse" {% if sort == "date-reverse" %} selected {% endif %}>Date (oldest to newest)</option>
+                            <option value="price-asc" {% if sort == "price-asc" %} selected {% endif %}>Price ascending</option>
+                            <option value="price-des" {% if sort == "price-des" %} selected {% endif %}>Price descending</option>
+                            <option value="alphabet" {% if sort == "alphabet" %} selected {% endif %}>Alphabetically A-Z</option>
+                            <option value="reverse-alphabet" {% if sort == "reverse-alphabet" %} selected {% endif %}>Alphabetically Z-A</option>
+                            <option value="popular" {% if sort == "popular" %} selected {% endif %}>Popularity</option>
+                            <option value="reverse-popular" {% if sort == "reverse-popular" %} selected {% endif %}>Reverse Popularity</option>
                         </select>
                     </form>
                     <div class="search-find">
