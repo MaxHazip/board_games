@@ -29,9 +29,9 @@
         <div class="tags">
             <p>Store</p>
             <ul class="tags_list">
-                {% for genre in genres %}
-                    <li class="tags_list-item">
-                        <a href="?genres={{ genre.name }}&search={{ request.GET.search }}">{{ genre.name }}</a>
+                {% for genre in all_genres %}
+                    <li class="tags_list-item" {% if request.GET.genres == genre.name %} style="background-image: url(../static/media/-active.svg);" {% endif %}>
+                        <a href="?genres={{ genre.name }}&search={{ request.GET.search }}&sort={{ request.GET.sort }}" {% if request.GET.genres == genre.name %} style="color: #CE895D;" {% endif %}>{{ genre.name }}</a>
                     </li>
                 {% endfor %}
             </ul>
@@ -51,15 +51,27 @@
                             <option value="reverse-alphabet" {% if sort == "reverse-alphabet" %} selected {% endif %}>Alphabetically Z-A</option>
                             <option value="popular" {% if sort == "popular" %} selected {% endif %}>Popularity</option>
                             <option value="reverse-popular" {% if sort == "reverse-popular" %} selected {% endif %}>Reverse Popularity</option>
+                            <input type="text" class="hidden" name="genres" value="{{ request.GET.genres }}">
+                            <input type="text" class="hidden" name="search" value="{{ request.GET.query }}">
                         </select>
                     </form>
                     <div class="search-find">
                         <label for="search">Search:</label>
                         <form class="searchbar" method="get" >
                             <input type="text" id="search" name="search" value="{{ request.GET.search }}">
-                            <input type="text" id="hidden" name="genres" value="{{ request.GET.genres }}">
+                            <input type="text" class="hidden" name="genres" value="{{ request.GET.genres }}">
+                            <input type="text" class="hidden" name="sort" value="{{ request.GET.sort }}">
                             <button type="submit" class="button"><img src="../static/media/Search-white.svg" alt="" class="search-image"></button>
                         </form>
+                        {% if genres_req and query %}
+                            <a href="/?sort={{ request.GET.sort }}" class="reset_button">Reset all</a>
+                            <a href="/?sort={{ request.GET.sort }}&genres={{ request.GET.genres }}" class="reset_button">Reset search</a>
+                            <a href="/?sort={{ request.GET.sort }}&search={{ request.GET.search }}" class="reset_button">Reset genres</a>
+                        {% elif genres_req%}
+                            <a href="/?sort={{ request.GET.sort }}" class="reset_button">Reset genres</a>
+                        {% elif query%}
+                            <a href="/?sort={{ request.GET.sort }}" class="reset_button">Reset search</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>

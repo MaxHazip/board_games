@@ -5,17 +5,17 @@ from .models import *
 def root(request):
 
     board_games = BoardGames.objects.all()
-    genres = Genres.objects.all()
+    all_genres = Genres.objects.all()
     query = request.GET.get('search', '')
     genres_req = request.GET.get('genres', '')
     sort = request.GET.get('sort', '')
 
-
-    if query:
-        board_games = BoardGames.objects.filter(name__icontains=query)
-
-    if genres_req:
+    if query and genres_req :
+        board_games = BoardGames.objects.filter(name__icontains=query, games_genres__name=genres_req)
+    elif genres_req:
         board_games = BoardGames.objects.filter(games_genres__name=genres_req)
+    elif query:
+        board_games = BoardGames.objects.filter(name__icontains=query)
 
     match sort:
         case "date-reverse":
@@ -38,9 +38,10 @@ def root(request):
     
     context = {
         "board_games": board_games,
-        "genres": genres,
+        "all_genres": all_genres,
         "query": query,
         "sort": sort,
+        "genres_req": genres_req,
     }
     return render(request, 'main-content.html', context)
 

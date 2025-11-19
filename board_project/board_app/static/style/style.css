@@ -114,9 +114,8 @@ main {
 
 .search-field {
     display: flex;
-    justify-content: space-between;
-    width: 46.67%;
     align-items: center;
+    width: 80%;
 }
 
 select {
@@ -125,6 +124,7 @@ select {
     padding: 2px;
     border: 2px solid #EDE9D4;
     font-size: 14px;
+    margin-right: 53px;
 }
 
 .cards-grid {
@@ -190,6 +190,10 @@ select {
     font-size: 24px;
 }
 
-#hidden {
+.hidden {
     display: none;
+}
+
+.reset_button {
+    margin-left: 10px;
 }
