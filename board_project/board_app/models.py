@@ -39,7 +39,7 @@ class Profiles(models.Model):
     email = models.EmailField('Электронная почта', max_length=50, null=True)
     phone_number = models.CharField('Телефон', max_length=50, null=True)
     birthday = models.DateField('Дата рождения')
-    bonus_card_id = models.ForeignKey('BonusCards', verbose_name='Бонусная карта', on_delete=models.CASCADE)
+    bonus_card_id = models.ForeignKey('BonusCards', verbose_name='Бонусная карта', on_delete=models.CASCADE, unique=True)
     order = models.ManyToManyField('BoardGames', through='Orders', through_fields=('profile_id', 'board_game_id'))
     cart_items = models.ManyToManyField('BoardGames', through='Cart', through_fields=('profile_id', 'board_game_id'), related_name='in_cart')
 
